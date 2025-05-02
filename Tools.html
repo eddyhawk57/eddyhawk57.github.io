@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools - AI Power Hub</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #0f172a; color: #fff; }
+    header, footer { background: #1e293b; padding: 20px; text-align: center; }
+    nav a { color: #38bdf8; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { padding: 40px 20px; }
+    h1 { color: #38bdf8; text-align: center; }
+    .tool-box { background: #1e293b; padding: 20px; margin: 20px 0; border-radius: 10px; }
+    .tool-box h2 { color: #0ea5e9; }
+    label, input, button, textarea { display: block; width: 100%; margin-top: 10px; }
+    input, textarea { padding: 10px; border-radius: 5px; border: none; }
+    button { background: #0ea5e9; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>AI Power Hub</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html">AI Tools</a>
+      <a href="downloads.html">Prompt Vault</a>
+      <a href="unlock.html">Unlock Features</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Try Our Free AI Tools</h1>
+
+    <div class="tool-box">
+      <h2>AI Bio Generator</h2>
+      <label for="bioInput">Describe yourself:</label>
+      <textarea id="bioInput" placeholder="e.g. I'm a web developer passionate about AI."></textarea>
+      <button onclick="generateBio()">Generate Bio</button>
+      <p id="bioOutput"></p>
+    </div>
+
+    <div class="tool-box">
+      <h2>Prompt of the Day</h2>
+      <button onclick="showPrompt()">Get Prompt</button>
+      <p id="promptOutput"></p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 AI Power Hub. All rights reserved.
+  </footer>
+
+  <script>
+    function generateBio() {
+      const input = document.getElementById('bioInput').value;
+      const output = document.getElementById('bioOutput');
+      if (input.trim() === '') {
+        output.innerText = 'Please enter a description.';
+      } else {
+        output.innerText = `"${input}"? Sounds like someone who's going to change the world!`; // Mock response
+      }
+    }
+
+    function showPrompt() {
+      const prompts = [
+        "Create a business plan using AI.",
+        "Write a short story with a twist ending.",
+        "Generate a viral tweet about technology.",
+        "Design an AI-powered mobile app idea."
+      ];
+      const random = prompts[Math.floor(Math.random() * prompts.length)];
+      document.getElementById('promptOutput').innerText = random;
+    }
+  </script>
+</body>
+</html>
