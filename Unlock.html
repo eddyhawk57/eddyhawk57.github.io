@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlock Features - AI Power Hub</title>
+  <style>
+    body { background: #0f172a; color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #1e293b; padding: 20px; text-align: center; }
+    nav a { color: #38bdf8; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
+    h1 { color: #38bdf8; margin-bottom: 20px; }
+    .locked-box { background: #1e293b; padding: 30px; border-radius: 8px; margin-top: 20px; }
+    button { background: #0ea5e9; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; }
+    .hidden { display: none; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>AI Power Hub</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html">AI Tools</a>
+      <a href="downloads.html">Prompt Vault</a>
+      <a href="unlock.html">Unlock Features</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>  <main>
+    <h1>Unlock Premium Features</h1>
+    <div class="locked-box">
+      <p>This feature is locked. Watch an ad to unlock:</p>
+      <button onclick="unlockFeature()">Watch Ad</button><div id="unlockedContent" class="hidden">
+    <p>Thank you! Premium feature unlocked:</p>
+    <a href="downloads.html" style="color:#38bdf8; text-decoration:underline;">Download Extra Prompt Pack</a>
+  </div>
+</div>
+
+  </main>  <footer>
+    &copy; 2025 AI Power Hub. All rights reserved.
+  </footer>  <script>
+    function unlockFeature() {
+      alert("Simulated ad watched."); // Replace with real ad logic if using actual monetization
+      document.getElementById('unlockedContent').classList.remove('hidden');
+    }
+  </script></body>
+</html>
