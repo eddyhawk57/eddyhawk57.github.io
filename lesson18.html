@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 18 - Convolutional Neural Networks (CNNs)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 18: Convolutional Neural Networks (CNNs)</h1>
+  </header>
+
+  <main>
+    <h2>Introduction to CNNs</h2>
+    <p>
+      Convolutional Neural Networks (CNNs) are specialized deep learning models designed for processing image data. They’re built to automatically detect patterns such as edges, shapes, and objects in images.
+    </p>
+
+    <h2>Key Components of CNNs</h2>
+    <ul>
+      <li><strong>Convolutional Layer:</strong> Applies filters to extract features from the input image.</li>
+      <li><strong>Pooling Layer:</strong> Reduces spatial dimensions, making computation efficient (e.g., Max Pooling).</li>
+      <li><strong>Fully Connected Layer:</strong> The final classification layer, similar to traditional neural networks.</li>
+    </ul>
+
+    <h2>Use Cases</h2>
+    <ul>
+      <li>Face recognition</li>
+      <li>Medical image diagnosis</li>
+      <li>Self-driving car vision systems</li>
+    </ul>
+
+    <h2>Example Using Keras</h2>
+    <pre><code>
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+
+model = Sequential()
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=10, batch_size=32)
+    </code></pre>
+
+    <div class="nav-links">
+      <a href="lesson17.html">&larr; Back to Lesson 17</a>
+      <a href="lesson19.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
