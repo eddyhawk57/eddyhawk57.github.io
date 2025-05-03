@@ -1,46 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Power Hub</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #0f172a; color: #fff; }
-    header { background: #1e293b; padding: 20px; text-align: center; }
-    nav a { color: #38bdf8; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    main { padding: 40px 20px; text-align: center; }
-    .hero { margin-bottom: 40px; }
-    .hero h1 { font-size: 2.5em; color: #38bdf8; }
-    .hero p { font-size: 1.2em; color: #cbd5e1; }
-    .cta { background: #0ea5e9; color: #fff; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; margin-top: 20px; }
-    footer { background: #1e293b; text-align: center; padding: 20px; margin-top: 60px; color: #94a3b8; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    header {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #fff;
+      margin: 0;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    .hero h2 {
+      color: #58a6ff;
+      font-size: 2em;
+    }
+    .hero p {
+      color: #8b949e;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+    .btn-primary {
+      background-color: #238636;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: #2ea043;
+    }
+    .ads-banner {
+      margin: 30px auto;
+      padding: 15px;
+      background-color: #21262d;
+      border: 2px dashed #30363d;
+      color: #8b949e;
+      text-align: center;
+      width: 90%;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .feature-box {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+    }
+    .feature-box h3 {
+      color: #58a6ff;
+    }
+    footer {
+      background-color: #161b22;
+      text-align: center;
+      padding: 20px;
+      color: #8b949e;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h2>AI Power Hub</h2>
+    <h1>AI Power Hub</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="tools.html">AI Tools</a>
-      <a href="downloads.html">Prompt Vault</a>
-      <a href="unlock.html">Unlock Features</a>
-      <a href="about.html">About</a>
+      <a href="/Eddyhawk57/index.html">Home</a>
+      <a href="/Eddyhawk57/tools.html">AI Tools</a>
+      <a href="/Eddyhawk57/downloads.html">Prompt Vault</a>
+      <a href="/Eddyhawk57/unlock.html">Unlock Features</a>
+      <a href="/Eddyhawk57/about.html">About</a>
     </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1>Unlock the Power of Free AI Tools</h1>
-      <p>Explore tools, download prompt packs, and unlock premium features by watching short ads!</p>
-      <a href="downloads.html"><button class="cta">Get Free Prompt Packs</button></a>
-    </section>
-
-    <section>
-      <p>Start exploring our free AI tools and exclusive downloads today.</p>
-    </section>
-  </main>
-
-  <footer>
+  </header>  <div class="hero">
+    <h2>Unlock the Power of Free AI Tools</h2>
+    <p>Explore tools, download prompt packs, and unlock premium features by watching short ads!</p>
+    <button class="btn-primary">Get Free Prompt Packs</button>
+  </div>  <div class="ads-banner">
+    [AD SPACE] – Your ad could be here!
+  </div>  <section class="features">
+    <div class="feature-box">
+      <h3>Image Generator</h3>
+      <p>Create AI-powered images using simple text prompts.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Chatbot Templates</h3>
+      <p>Download pre-built chatbot prompts for instant use.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Unlockable Features</h3>
+      <p>Watch ads to unlock exclusive downloads and tools.</p>
+    </div>
+  </section>  <footer>
     &copy; 2025 AI Power Hub. All rights reserved.
   </footer>
 </body>
