@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 17 - Deep Learning Fundamentals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 17: Deep Learning Fundamentals</h1>
+  </header>
+
+  <main>
+    <h2>What is Deep Learning?</h2>
+    <p>
+      Deep Learning is a subfield of Machine Learning that uses complex neural networks with many layers to learn from data. These models excel in learning from unstructured data like images, audio, and text.
+    </p>
+
+    <h2>Key Concepts</h2>
+    <ul>
+      <li><strong>Layers:</strong> Deep networks have multiple layers (hence “deep”). Each layer captures higher-level features.</li>
+      <li><strong>Activation Functions:</strong> Decide whether a neuron should be activated (ReLU, Sigmoid, Tanh).</li>
+      <li><strong>Backpropagation:</strong> Algorithm to update weights in the network using error signals.</li>
+    </ul>
+
+    <h2>Applications of Deep Learning</h2>
+    <ul>
+      <li>Image classification (e.g., recognizing cats in photos)</li>
+      <li>Speech recognition (e.g., virtual assistants)</li>
+      <li>Natural Language Processing (e.g., chatbots, translation)</li>
+    </ul>
+
+    <h2>Sample Deep Learning Model (Keras)</h2>
+    <pre><code>
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+
+model = Sequential()
+model.add(Dense(128, activation='relu', input_shape=(100,)))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=20, batch_size=32)
+    </code></pre>
+
+    <div class="nav-links">
+      <a href="lesson16.html">&larr; Back to Lesson 16</a>
+      <a href="lesson18.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
