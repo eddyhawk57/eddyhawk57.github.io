@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 13 - Fine-Tuning Pretrained Models</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 13: Fine-Tuning Pretrained Models</h1>
+  </header>
+
+  <main>
+    <h2>What is Fine-Tuning?</h2>
+    <p>
+      Fine-tuning is a technique where we unfreeze some layers of a pretrained model and train them alongside new layers for improved performance on a specific task.
+    </p>
+
+    <h2>Why Fine-Tuning?</h2>
+    <ul>
+      <li>Extract more relevant features for your specific dataset</li>
+      <li>Boost performance compared to using frozen layers only</li>
+      <li>Useful when you have moderate to large dataset sizes</li>
+    </ul>
+
+    <h2>Example: Fine-Tuning VGG16</h2>
+    <pre><code>
+# Unfreeze the top layers of VGG16
+base_model.trainable = True
+
+# Optionally freeze some of the earlier layers
+for layer in base_model.layers[:10]:
+    layer.trainable = False
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Train the model
+model.fit(train_data, train_labels, epochs=5, validation_data=(val_data, val_labels))
+    </code></pre>
+
+    <h2>Tips for Fine-Tuning</h2>
+    <ul>
+      <li>Always start with transfer learning (frozen layers)</li>
+      <li>Use a lower learning rate when fine-tuning</li>
+      <li>Avoid overfitting with regularization techniques</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      Fine-tuning gives your model the edge it needs by adapting pretrained knowledge more deeply to your data. Next, we’ll explore model evaluation techniques.
+    </p>
+
+    <div class="nav-links">
+      <a href="lesson12.html">&larr; Back to Lesson 12</a>
+      <a href="lesson14.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
