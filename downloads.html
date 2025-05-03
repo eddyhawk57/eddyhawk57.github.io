@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Vault - AI Power Hub</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #0f172a; color: #fff; }
+    header, footer { background: #1e293b; padding: 20px; text-align: center; }
+    nav a { color: #38bdf8; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    main { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
+    h1 { color: #38bdf8; }
+    input[type="email"] { width: 100%; padding: 12px; border-radius: 6px; border: none; margin: 15px 0; }
+    button { background: #0ea5e9; color: #fff; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; }
+    .hidden { display: none; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>AI Power Hub</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html">AI Tools</a>
+      <a href="downloads.html">Prompt Vault</a>
+      <a href="unlock.html">Unlock Features</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>  <main>
+    <h1>Download 100+ Free AI Prompts</h1>
+    <p>Enter your email to access exclusive prompt packs instantly!</p>
+    <input type="email" id="emailInput" placeholder="Enter your email...">
+    <button onclick="unlockDownload()">Download Now</button><div class="hidden" id="downloadLink">
+  <p>Thanks! Your prompts are ready:</p>
+  <a href="#" style="color: #0ea5e9; text-decoration: underline;">Download Prompt Pack (PDF)</a>
+</div>
+
+  </main>  <footer>
+    &copy; 2025 AI Power Hub. All rights reserved.
+  </footer>  <script>
+    function unlockDownload() {
+      const email = document.getElementById('emailInput').value;
+      const link = document.getElementById('downloadLink');
+      if (email.includes('@')) {
+        link.classList.remove('hidden');
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    }
+  </script></body>
+      </html>
