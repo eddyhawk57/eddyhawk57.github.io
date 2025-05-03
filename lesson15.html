@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 15 - Neural Networks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 15: Neural Networks</h1>
+  </header>
+
+  <main>
+    <h2>Introduction</h2>
+    <p>
+      Neural networks are the foundation of modern artificial intelligence and deep learning. Inspired by the human brain, these systems are capable of recognizing patterns, making predictions, and learning from data. This lesson introduces the basics of how neural networks function and why they’re so powerful in AI applications.
+    </p>
+
+    <h2>Key Components of Neural Networks</h2>
+    <ul>
+      <li><strong>Input Layer:</strong> Receives the raw data.</li>
+      <li><strong>Hidden Layers:</strong> Perform computations and extract features.</li>
+      <li><strong>Output Layer:</strong> Produces the final prediction or classification.</li>
+      <li><strong>Weights & Biases:</strong> Adjusted during training to improve accuracy.</li>
+      <li><strong>Activation Functions:</strong> Add non-linearity (e.g., ReLU, sigmoid).</li>
+    </ul>
+
+    <h2>Real-World Examples</h2>
+    <ul>
+      <li><strong>Face recognition:</strong> Neural networks analyze features in images to identify people.</li>
+      <li><strong>Voice assistants:</strong> Used in speech-to-text models like Alexa and Google Assistant.</li>
+      <li><strong>Self-driving cars:</strong> Used in object detection and decision-making.</li>
+    </ul>
+
+    <h2>Code Example (Using Keras)</h2>
+    <pre><code>
+from keras.models import Sequential
+from keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(input_dim,)))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=10, batch_size=32)
+    </code></pre>
+
+    <h2>Conclusion</h2>
+    <p>
+      Neural networks are essential to modern AI. They mimic the way humans learn and are capable of solving complex problems like image recognition, language translation, and forecasting. As we move forward in this course, you’ll see how neural networks evolve into even more powerful forms like convolutional and recurrent neural networks.
+    </p>
+
+    <div class="nav-links">
+      <a href="lesson14.html">&larr; Back to Lesson 14</a>
+      <a href="lesson16.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
