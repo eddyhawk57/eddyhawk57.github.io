@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 3 - Data Collection and Preprocessing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 3: Data Collection and Preprocessing</h1>
+  </header>
+
+  <main>
+    <h2>Importance of Data in Machine Learning</h2>
+    <p>
+      Data is the foundation of any AI or machine learning model. The quality, quantity, and relevance of your data directly affect the performance of your model. Without good data, even the most powerful algorithms will fail.
+    </p>
+
+    <h2>Sources of Data</h2>
+    <ul>
+      <li><strong>Public Datasets:</strong> Kaggle, UCI Machine Learning Repository, Google Dataset Search</li>
+      <li><strong>APIs:</strong> Twitter API, OpenWeatherMap API, YouTube API</li>
+      <li><strong>Web Scraping:</strong> Extracting data from websites using tools like BeautifulSoup or Scrapy</li>
+    </ul>
+
+    <h2>Steps in Data Preprocessing</h2>
+    <ul>
+      <li><strong>Data Cleaning:</strong> Handle missing values, remove duplicates, fix errors</li>
+      <li><strong>Normalization:</strong> Scale numerical values to a consistent range</li>
+      <li><strong>Encoding:</strong> Convert categorical data into numbers using techniques like One-Hot Encoding</li>
+      <li><strong>Splitting:</strong> Divide data into training and testing sets</li>
+    </ul>
+
+    <h2>Example in Python</h2>
+    <p>Here's a simple preprocessing example using pandas:</p>
+    <pre><code>
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+# Load data
+df = pd.read_csv('data.csv')
+
+# Fill missing values
+df.fillna(0, inplace=True)
+
+# Normalize features
+scaler = StandardScaler()
+df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
+    </code></pre>
+
+    <h2>Conclusion</h2>
+    <p>
+      Clean, structured data is essential for building accurate models. In the next lesson, you'll build your first real machine learning model using this data. Get excited — you're about to start coding AI!
+    </p>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="lesson2.html">&larr; Back to Lesson 2</a>
+      <a href="lesson4.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+  </html>
