@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 20 - Long Short-Term Memory (LSTM)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 20: Long Short-Term Memory (LSTM)</h1>
+  </header>
+
+  <main>
+    <h2>What is LSTM?</h2>
+    <p>
+      LSTM stands for Long Short-Term Memory. It's a type of Recurrent Neural Network (RNN) designed to remember information for long periods and overcome the vanishing gradient problem.
+    </p>
+
+    <h2>Why Use LSTM?</h2>
+    <ul>
+      <li>Handles long-term dependencies more effectively than standard RNNs.</li>
+      <li>Used in speech recognition, time-series forecasting, and natural language processing.</li>
+    </ul>
+
+    <h2>LSTM Structure</h2>
+    <p>
+      LSTMs have a more complex structure that includes <strong>gates</strong>:
+    </p>
+    <ul>
+      <li><strong>Forget Gate:</strong> Decides what information to discard.</li>
+      <li><strong>Input Gate:</strong> Decides what new information to store.</li>
+      <li><strong>Output Gate:</strong> Determines the next hidden state.</li>
+    </ul>
+
+    <h2>Example Using Keras</h2>
+    <pre><code>
+from keras.models import Sequential
+from keras.layers import LSTM, Dense
+
+model = Sequential()
+model.add(LSTM(50, activation='tanh', input_shape=(timesteps, features)))
+model.add(Dense(1))
+
+model.compile(optimizer='adam', loss='mse')
+model.fit(X_train, y_train, epochs=10, batch_size=32)
+    </code></pre>
+
+    <div class="nav-links">
+      <a href="lesson19.html">&larr; Back to Lesson 19</a>
+      <a href="lesson21.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
