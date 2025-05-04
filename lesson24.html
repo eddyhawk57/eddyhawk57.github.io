@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 24 - Convolutional Neural Networks (CNNs)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 24: Convolutional Neural Networks (CNNs)</h1>
+  </header>
+
+  <main>
+    <h2>Introduction</h2>
+    <p>
+      Convolutional Neural Networks (CNNs) are a class of deep learning models primarily used for analyzing visual imagery. CNNs are at the heart of most computer vision applications like image recognition, object detection, and more.
+    </p>
+
+    <h2>Key Concepts</h2>
+    <ul>
+      <li><strong>Convolution Layer</strong> – Extracts features from input images using filters</li>
+      <li><strong>Pooling Layer</strong> – Reduces the spatial dimensions (downsampling)</li>
+      <li><strong>Fully Connected Layer</strong> – Connects neurons to perform classification</li>
+    </ul>
+
+    <h2>Basic CNN Architecture</h2>
+    <p>
+      A typical CNN consists of multiple convolution and pooling layers, followed by fully connected layers. This structure allows the model to learn complex features from images.
+    </p>
+
+    <h2>Example Using Keras</h2>
+    <pre><code>
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+
+model = Sequential([
+  Conv2D(32, (3,3), activation='relu', input_shape=(64,64,3)),
+  MaxPooling2D(pool_size=(2,2)),
+  Flatten(),
+  Dense(128, activation='relu'),
+  Dense(10, activation='softmax')
+])
+    </code></pre>
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li>Image classification (e.g., cat vs. dog)</li>
+      <li>Facial recognition systems</li>
+      <li>Medical image analysis (e.g., X-rays, MRIs)</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      CNNs are a fundamental component of computer vision systems. They efficiently capture spatial hierarchies in data and are crucial for building robust AI models that understand visual information.
+    </p>
+
+    <div class="nav-links">
+      <a href="lesson23.html">&larr; Back to Lesson 23</a>
+      <a href="lesson25.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+      </html>
