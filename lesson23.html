@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 23 - Introduction to Computer Vision</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-ad {
+      margin-bottom: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 23: Introduction to Computer Vision</h1>
+  </header>
+
+  <main>
+    <h2>Introduction</h2>
+    <p>
+      Computer Vision is a field of AI that enables computers to interpret and process visual information like images and videos. It powers technologies like face recognition, medical imaging, and self-driving cars.
+    </p>
+
+    <h2>Core Concepts</h2>
+    <ul>
+      <li><strong>Image Processing</strong> – Manipulating pixel data (e.g., filtering, edge detection)</li>
+      <li><strong>Object Detection</strong> – Identifying and locating objects within an image</li>
+      <li><strong>Classification</strong> – Assigning labels to images (e.g., dog, cat, car)</li>
+    </ul>
+
+    <h2>Popular Tools and Libraries</h2>
+    <ul>
+      <li><strong>OpenCV</strong> – Open-source library for image and video processing</li>
+      <li><strong>TensorFlow/Keras</strong> – For building deep learning models</li>
+      <li><strong>PyTorch</strong> – Another powerful deep learning library used in computer vision research</li>
+    </ul>
+
+    <h2>Example: Loading and Displaying an Image</h2>
+    <pre><code>
+import cv2
+
+# Load image
+image = cv2.imread('example.jpg')
+
+# Display image
+cv2.imshow('Sample Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+    </code></pre>
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li>Face unlock on phones</li>
+      <li>Automatic photo tagging on social media</li>
+      <li>License plate recognition</li>
+      <li>Medical diagnosis from X-rays or MRIs</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      Computer Vision allows machines to see and understand the visual world. In upcoming lessons, you’ll learn how to build your own computer vision models and apply them to real-world challenges.
+    </p>
+
+    <div class="nav-links">
+      <a href="lesson22.html">&larr; Back to Lesson 22</a>
+      <a href="lesson24.html">Next Lesson &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-ad">
+      <!-- Your Ad Code Goes Here -->
+      <p>Advertisement Space</p>
+    </div>
+    <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+  </footer>
+
+</body>
+  </html>
